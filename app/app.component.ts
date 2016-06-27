@@ -9,5 +9,5 @@ import {} from './gestion-proyecto.component';
   templateUrl: './app/app.component.html'
 })
 export class AppComponent { 
-  titulo:string = "Título de la Paginaa"
+  titulo:string = "Sistema de Gestión de Proyectos Senescyt"
 }

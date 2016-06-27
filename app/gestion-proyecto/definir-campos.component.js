@@ -9,21 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.titulo = "Sistema de Gestión de Proyectos Senescyt";
+var DefinirCamposComponent = (function () {
+    function DefinirCamposComponent() {
     }
-    AppComponent = __decorate([
+    DefinirCamposComponent.prototype.ngOnInit = function () { };
+    DefinirCamposComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            styleUrls: ['./app/app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
-            templateUrl: './app/app.component.html'
+            moduleId: module.id,
+            selector: 'app-definir-campos',
+            templateUrl: 'definir-campos.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], DefinirCamposComponent);
+    return DefinirCamposComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.DefinirCamposComponent = DefinirCamposComponent;
+//# sourceMappingURL=definir-campos.component.js.map
