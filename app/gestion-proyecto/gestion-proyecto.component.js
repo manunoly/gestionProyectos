@@ -9,21 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.titulo = "Título de la Paginaa";
+var GestionProyectoComponent = (function () {
+    function GestionProyectoComponent() {
     }
-    AppComponent = __decorate([
+    GestionProyectoComponent.prototype.ngOnInit = function () { };
+    GestionProyectoComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            styleUrls: ['./app/app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
-            templateUrl: './app/app.component.html'
+            moduleId: module.id,
+            selector: 'mod-gestion',
+            templateUrl: 'gestion-proyecto.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], GestionProyectoComponent);
+    return GestionProyectoComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.GestionProyectoComponent = GestionProyectoComponent;
+//# sourceMappingURL=gestion-proyecto.component.js.map
