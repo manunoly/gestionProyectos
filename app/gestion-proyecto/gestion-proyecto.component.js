@@ -9,17 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var listar_proyectos_servise_1 = require('./listar-proyectos.servise');
 var GestionProyectoComponent = (function () {
-    function GestionProyectoComponent() {
+    function GestionProyectoComponent(listarProyectos) {
+        this.listarProyectos = listarProyectos;
+        this.proyectos = [];
     }
-    GestionProyectoComponent.prototype.ngOnInit = function () { };
+    GestionProyectoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        console.log(this.listarProyectos.getProyectos());
+        this.listarProyectos.getProyectos().then(function (proyectos) { return _this.proyectos = proyectos.slice(1, 5); });
+        console.log(this.proyectos);
+    };
     GestionProyectoComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'mod-gestion',
-            templateUrl: 'gestion-proyecto.component.html'
+            templateUrl: 'gestion-proyecto.component.html',
+            providers: [listar_proyectos_servise_1.ListarProyectosService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [listar_proyectos_servise_1.ListarProyectosService])
     ], GestionProyectoComponent);
     return GestionProyectoComponent;
 }());
