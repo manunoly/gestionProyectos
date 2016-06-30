@@ -2,10 +2,14 @@
 var router_1 = require('@angular/router');
 var gestion_proyecto_component_1 = require('./gestion-proyecto/gestion-proyecto.component');
 var definir_campos_component_1 = require('./gestion-proyecto/definir-campos.component');
+var inicio_component_1 = require('./inicio/inicio.component');
 exports.routes = [
     /*{ path: 'inicio', component: AppComponent },*/
+    { path: '', redirectTo: 'inicio' },
+    { path: 'inicio', component: inicio_component_1.InicioComponent },
     { path: 'proyecto', component: gestion_proyecto_component_1.GestionProyectoComponent },
-    { path: 'definir-campos', component: definir_campos_component_1.DefinirCamposComponent }
+    { path: 'definir-campos', component: definir_campos_component_1.DefinirCamposComponent },
+    { path: '**', redirectTo: 'home' }
 ];
 exports.APP_ROUTER_PROVIDERS = [
     router_1.provideRouter(exports.routes)
