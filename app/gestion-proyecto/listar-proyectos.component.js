@@ -10,27 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var listar_proyectos_servise_1 = require('./listar-proyectos.servise');
-var GestionProyectoComponent = (function () {
-    function GestionProyectoComponent(listarProyectos) {
+var ListarProyectosComponent = (function () {
+    function ListarProyectosComponent(listarProyectos) {
         this.listarProyectos = listarProyectos;
         this.proyectos = [];
     }
-    GestionProyectoComponent.prototype.ngOnInit = function () {
+    ListarProyectosComponent.prototype.ngOnInit = function () {
         var _this = this;
         console.log(this.listarProyectos.getProyectos());
         this.listarProyectos.getProyectos().then(function (proyectos) { return _this.proyectos = proyectos.slice(1, 5); });
         console.log(this.proyectos);
     };
-    GestionProyectoComponent = __decorate([
+    ListarProyectosComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'mod-gestion',
-            templateUrl: 'gestion-proyecto.component.html',
+            selector: 'listar-proyectos',
+            templateUrl: 'listar-proyectos.component.html',
             providers: [listar_proyectos_servise_1.ListarProyectosService]
         }), 
         __metadata('design:paramtypes', [listar_proyectos_servise_1.ListarProyectosService])
-    ], GestionProyectoComponent);
-    return GestionProyectoComponent;
+    ], ListarProyectosComponent);
+    return ListarProyectosComponent;
 }());
-exports.GestionProyectoComponent = GestionProyectoComponent;
-//# sourceMappingURL=gestion-proyecto.component.js.map
+exports.ListarProyectosComponent = ListarProyectosComponent;
+//# sourceMappingURL=listar-proyectos.component.js.map
