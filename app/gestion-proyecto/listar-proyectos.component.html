@@ -1,10 +1,13 @@
-<h3> Listamos los últimos Proyectos</h3>
+<h3> Listamos de Proyectos</h3>
 
 
-<ol *ngFor="let item of proyectos">
-    <li *ngIf="$first"> sasss</li>
-    <li> <input type="number" style="margin-right: 10px; width:60;" value={{item.id}}> <input type="text" class="" value={{item.nombre}}></li>
+<ol>
+    <!--<li *ngIf="$first"> sasss</li>-->
+    <li *ngFor="let item of proyectos"  (click) = "proyectoDetalle(item)"> 
+      <input type="number" style="margin-right: 10px; width:60;" value={{item.id}}> {{item.nombre}}
+    </li>
 </ol>
+
  <input type="button" value="Guardar">
 <br>
   <input type="button" value="Guardar">

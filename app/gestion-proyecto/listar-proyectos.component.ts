@@ -1,24 +1,50 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { ListarProyectosService } from './listar-proyectos.servise';
+import { DetalleProyectoComponent } from './detalle-proyecto.component';
 import { Proyecto } from './proyecto';
+
 
 @Component({
     moduleId: module.id,
     selector: 'listar-proyectos',
     templateUrl: 'listar-proyectos.component.html',
-    providers: [ListarProyectosService]
+    providers: [ListarProyectosService]/*,
+    directives: [DetalleProyectoComponent]*/
 })
 export class ListarProyectosComponent implements OnInit {
-    proyectos: Proyecto[] = [];
+    proyectos: Proyecto[];
+    proyectoSeleccionado: Proyecto;
 
-    constructor(private listarProyectos: ListarProyectosService) { 
+    constructor(
+        private _route: ActivatedRoute,
+        private sub: any,
+        private _router: Router,
+        private _listarProyectos: ListarProyectosService) { 
         
     }
 
     ngOnInit() { 
-        console.log(this.listarProyectos.getProyectos());        
-        this.listarProyectos.getProyectos().then(
-        proyectos => this.proyectos = proyectos.slice(1,5));
-        console.log(this.proyectos);
+        this.listarProyectos();
+/*        this.sub = this._route.params.subscribe(params => {let id = +params['id']; 
+     // (+) converts string 'id' to a number
+        this.service.getHero(id).then(hero => this.pro = hero);});*/
     }
+    ngOnDestroy() {
+        this.sub.unsubscribe();
+    }
+    /**
+     * proyectoDetalle
+     */
+    public proyectoDetalle(proyecto: Proyecto) {
+        this._router.navigate(['/proyecto', proyecto.id])
+    }
+    /**
+     * listarProyectos
+     */
+    public listarProyectos() {
+        return this._listarProyectos.getProyectos().then(proyectos => this.proyectos = proyectos.slice(1,5));
+    }
+
 }

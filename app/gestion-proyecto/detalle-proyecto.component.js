@@ -9,20 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var DefinirCamposComponent = (function () {
-    function DefinirCamposComponent() {
+var router_1 = require('@angular/router');
+var DetalleProyectoComponent = (function () {
+    function DetalleProyectoComponent() {
     }
-    DefinirCamposComponent.prototype.ngOnInit = function () { };
-    DefinirCamposComponent = __decorate([
+    DetalleProyectoComponent.prototype.ngOnInit = function () { };
+    DetalleProyectoComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'app-definir-campos',
-            templateUrl: 'definir-campos.component.html',
-            precompile: [DefinirCamposComponent]
+            selector: 'selector',
+            template: '<h1>Detalle de un Proyecto</h1>',
+            providers: [router_1.Router],
+            precompile: [DetalleProyectoComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], DefinirCamposComponent);
-    return DefinirCamposComponent;
+    ], DetalleProyectoComponent);
+    return DetalleProyectoComponent;
 }());
-exports.DefinirCamposComponent = DefinirCamposComponent;
-//# sourceMappingURL=definir-campos.component.js.map
+exports.DetalleProyectoComponent = DetalleProyectoComponent;
+//# sourceMappingURL=detalle-proyecto.component.js.map
