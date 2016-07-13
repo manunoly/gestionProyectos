@@ -12,9 +12,10 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var listar_proyectos_servise_1 = require('./listar-proyectos.servise');
 var ListarProyectosComponent = (function () {
-    function ListarProyectosComponent(_route, sub, _router, _listarProyectos) {
+    function ListarProyectosComponent(_route, 
+        // private sub: any,
+        _router, _listarProyectos) {
         this._route = _route;
-        this.sub = sub;
         this._router = _router;
         this._listarProyectos = _listarProyectos;
     }
@@ -25,13 +26,15 @@ var ListarProyectosComponent = (function () {
                 this.service.getHero(id).then(hero => this.pro = hero);});*/
     };
     ListarProyectosComponent.prototype.ngOnDestroy = function () {
-        this.sub.unsubscribe();
+        // this.sub.unsubscribe();
     };
     /**
      * proyectoDetalle
      */
     ListarProyectosComponent.prototype.proyectoDetalle = function (proyecto) {
-        this._router.navigate(['/proyecto', proyecto.id]);
+        //this._router.navigate(['/proyecto', proyecto.id])
+        this.proyectoSeleccionado = proyecto;
+        alert(this.proyectoSeleccionado.id + '_' + this.proyectoSeleccionado.nombre);
     };
     /**
      * listarProyectos
@@ -48,7 +51,7 @@ var ListarProyectosComponent = (function () {
             providers: [listar_proyectos_servise_1.ListarProyectosService] /*,
             directives: [DetalleProyectoComponent]*/
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, Object, router_1.Router, listar_proyectos_servise_1.ListarProyectosService])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, listar_proyectos_servise_1.ListarProyectosService])
     ], ListarProyectosComponent);
     return ListarProyectosComponent;
 }());

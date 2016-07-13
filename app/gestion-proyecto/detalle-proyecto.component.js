@@ -18,7 +18,7 @@ var DetalleProyectoComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'selector',
-            template: '<h1>Detalle de un Proyecto</h1>',
+            template: "\n  <div *ngIf=\"proyecto\">\n    <h2>{{proyecto.name}} details!</h2>\n    <div><label>id: </label>{{proyecto.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"proyecto.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n",
             providers: [router_1.Router],
             precompile: [DetalleProyectoComponent]
         }), 

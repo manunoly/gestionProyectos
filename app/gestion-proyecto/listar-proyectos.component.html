@@ -1,17 +1,16 @@
 <h3> Listamos de Proyectos</h3>
 
 
-<ol>
+<ul>
     <!--<li *ngIf="$first"> sasss</li>-->
-    <li *ngFor="let item of proyectos"  (click) = "proyectoDetalle(item)"> 
-      <input type="number" style="margin-right: 10px; width:60;" value={{item.id}}> {{item.nombre}}
-    </li>
-</ol>
+    <p *ngFor="let item of proyectos"> 
+      <button (click) = "proyectoDetalle(item)">ver</button>
+      {{item.id}} 
+      <span style="color:blue; padding-width: 12em">{{item.nombre}}</span>
+      <!--<input type="number" style="margin-right: 10px; width:60;" value={{item.id}}>       -->
+    </p>
+</ul>
 
- <input type="button" value="Guardar">
-<br>
-  <input type="button" value="Guardar">
- <br>
-   <input type="button" value="Guardar"><br>
-    <input type="button" value="Guardar"><br>
-     <input type="button" value="Guardar"><br>
+<my-hero-detail [proyecto]="selectedHero"></my-hero-detail>
+
+<input type="button" value="Guardar"><br>

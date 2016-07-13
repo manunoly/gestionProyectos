@@ -19,7 +19,7 @@ export class ListarProyectosComponent implements OnInit {
 
     constructor(
         private _route: ActivatedRoute,
-        private sub: any,
+        // private sub: any,
         private _router: Router,
         private _listarProyectos: ListarProyectosService) { 
         
@@ -32,13 +32,14 @@ export class ListarProyectosComponent implements OnInit {
         this.service.getHero(id).then(hero => this.pro = hero);});*/
     }
     ngOnDestroy() {
-        this.sub.unsubscribe();
+        // this.sub.unsubscribe();
     }
     /**
      * proyectoDetalle
      */
     public proyectoDetalle(proyecto: Proyecto) {
-        this._router.navigate(['/proyecto', proyecto.id])
+        //this._router.navigate(['/proyecto', proyecto.id])
+        this.proyectoSeleccionado = proyecto;
     }
     /**
      * listarProyectos
