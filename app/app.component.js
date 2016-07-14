@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var AppComponent = (function () {
     function AppComponent() {
-        this.titulo = "Sistema de Gestión de Proyectos Senescyt";
+        this.titulo = "Sistema para Gestión de Proyectos INER";
     }
     AppComponent = __decorate([
         core_1.Component({

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import {CORE_DIRECTIVES} from '@angular/common';
 import {} from './gestion-proyecto.component';
 
 @Component({
@@ -8,6 +9,6 @@ import {} from './gestion-proyecto.component';
   directives: [ROUTER_DIRECTIVES],
   templateUrl: './app/app.component.html'
 })
-export class AppComponent { 
-  titulo:string = "Sistema de Gestión de Proyectos Senescyt"
+export class AppComponent {
+  titulo: string = "Sistema para Gestión de Proyectos INER";
 }

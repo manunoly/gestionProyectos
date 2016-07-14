@@ -9,15 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
+var common_1 = require('@angular/common');
+var template = require('./alert-demo.html');
 var InicioComponent = (function () {
     function InicioComponent() {
+        this.alerts = [
+            {
+                type: 'danger',
+                msg: 'Oh snap! Change a few things up and try submitting again.'
+            },
+            {
+                type: 'success',
+                msg: 'Well done! You successfully read this important alert message.',
+                closable: true
+            }
+        ];
     }
     InicioComponent.prototype.ngOnInit = function () { };
+    InicioComponent.prototype.closeAlert = function (i) {
+        this.alerts.splice(i, 1);
+    };
+    InicioComponent.prototype.addAlert = function () {
+        this.alerts.push({ msg: 'Another alert!', type: 'warning', closable: true });
+    };
     InicioComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'inicio',
-            templateUrl: 'inicio.component.html'
+            templateUrl: 'inicio.component.html',
+            directives: [ng2_bootstrap_1.AlertComponent, common_1.CORE_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
     ], InicioComponent);

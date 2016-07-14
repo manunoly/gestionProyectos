@@ -34,7 +34,6 @@ var ListarProyectosComponent = (function () {
     ListarProyectosComponent.prototype.proyectoDetalle = function (proyecto) {
         //this._router.navigate(['/proyecto', proyecto.id])
         this.proyectoSeleccionado = proyecto;
-        alert(this.proyectoSeleccionado.id + '_' + this.proyectoSeleccionado.nombre);
     };
     /**
      * listarProyectos

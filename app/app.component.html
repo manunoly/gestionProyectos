@@ -1,19 +1,38 @@
+<h3 class="Text-Info">  Sistema para la Gestion de Proyectos</h3>
+<!--<img alt="Sistema para la Gestion de Proyectos">-->
 
-<h3 id="universal">Sistema para la Gestion de Proyectos</h3>
-<nav>
-    <a [routerLink]="['/inicio']">Inicio</a>    
-    <a [routerLink]="['/proyecto']">Proyectos</a>    
-    <a [routerLink]="['/definir-campos']">Definir Campos</a>
-    
-</nav>
-  <div class="hero-universal">
-    <div class="inner-hero">
-
-
-      <main>
-        <router-outlet></router-outlet>
-      </main>
-
-      <blockquote></blockquote>
+<nav class="navbar .navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li role="presentation" class="active"><a [routerLink]="['/inicio']">Inicio</a></li>
+        <li role="presentation"><a [routerLink]="['/proyecto']">Proyectos</a></li>
+        <li role="presentation"><a [routerLink]="['/definir-campos']">Definir Campos</a></li>
+      </ul>
+<!--      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>-->
     </div>
   </div>
+</nav>
+
+<!-- dropdown directive marks a dropdown root element -->
+<div dropdown>
+  <!-- click on dropdown-toggle toggles dropdown state, optional -->
+  <div dropdownToggle></div>
+  <!-- dropdown-menu holds content which will be shown -->
+  <div dropdownMenu>
+    <!-- this content will be shown if dropdown opened -->
+  </div>
+</div>
+    <main class="container">
+      <router-outlet></router-outlet>
+    </main>
