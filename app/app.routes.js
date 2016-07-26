@@ -1,13 +1,17 @@
 "use strict";
 var router_1 = require('@angular/router');
 var listar_proyectos_component_1 = require('./gestion-proyecto/listar-proyectos.component');
+var detalle_proyecto_component_1 = require('./gestion-proyecto/detalle-proyecto.component');
 var definir_campos_component_1 = require('./gestion-proyecto/definir-campos.component');
+var nuevo_proyecto_component_1 = require('./gestion-proyecto/nuevo-proyecto.component');
 var no_encontrado_component_1 = require('./inicio/no-encontrado.component');
 var inicio_component_1 = require('./inicio/inicio.component');
 exports.routes = [
     { path: '', redirectTo: 'inicio', pathMatch: 'full' },
     { path: 'inicio', component: inicio_component_1.InicioComponent },
-    { path: 'proyecto', component: listar_proyectos_component_1.ListarProyectosComponent /*,
+    { path: 'nuevo-proyecto', component: nuevo_proyecto_component_1.NuevoProyectoComponent },
+    { path: 'proyecto/:id', component: detalle_proyecto_component_1.DetalleProyectoComponent },
+    { path: 'proyectos', component: listar_proyectos_component_1.ListarProyectosComponent /*,
           children:[
             {
               path: '',

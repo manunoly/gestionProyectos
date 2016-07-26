@@ -1,23 +1,37 @@
-<h3> Listamos de Proyectos</h3>
+<div class="container col-xs-12">
 
+  <h2 class="text-primary">Listamos de Proyectos</h2>
+  <hr>
 
-<ul>
-    <!--<li *ngIf="$first"> sasss</li>-->
-    <p *ngFor="let item of proyectos"> 
-      <button (click) = "proyectoDetalle(item)">ver</button>
-      {{item.id}} 
-      <span style="color:blue; padding-width: 12em">{{item.nombre}}</span>
-      <!--<input type="number" style="margin-right: 10px; width:60;" value={{item.id}}>       -->
-    </p>
-</ul>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th>Nombre</th>
+        <th>Estado</th>
+        <th class="hidden-sm">Lugar de ejecucion</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let item of proyectos">
+      <!--<td><button (click)="proyectoDetalle(item)">ver</button></td>-->
+      <td class="col-sm-1.5"><button type="button" class="btn btn-default btn-xs">Editar</button>
+      <button type="button" class="btn btn-default btn-xs">Eliminar</button>
+      </td>
+      <td>{{item.id}}</td>
+      <td><a [routerLink]="['/proyecto/:id']">{{item.nombre}}</a></td>
+      <td>{{item.estado}}</td>
+      <td class="hidden-sm">{{item.lugarEjecucion}}</td>
+    </tr>
+  </table>
+  <my-hero-detail [proyecto]="selectedHero"></my-hero-detail>
 
-<my-hero-detail [proyecto]="selectedHero"></my-hero-detail>
-
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
-<input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+  <input class="row btn btn-primary" type="button" value="Guardar"><br>
+</div>

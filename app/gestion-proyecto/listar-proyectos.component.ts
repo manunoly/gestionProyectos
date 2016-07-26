@@ -4,16 +4,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ListarProyectosService } from './listar-proyectos.servise';
 import { DetalleProyectoComponent } from './detalle-proyecto.component';
 import { Proyecto } from './proyecto';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 
 @Component({
     moduleId: module.id,
     selector: 'listar-proyectos',
     templateUrl: 'listar-proyectos.component.html',
+    directives: [ROUTER_DIRECTIVES],
     providers: [ListarProyectosService]/*,
     directives: [DetalleProyectoComponent]*/
 })
-export class ListarProyectosComponent implements OnInit {
+export class ListarProyectosComponent implements OnInit { 
     proyectos: Proyecto[];
     proyectoSeleccionado: Proyecto;
 
@@ -45,7 +47,7 @@ export class ListarProyectosComponent implements OnInit {
      * listarProyectos
      */
     public listarProyectos() {
-        return this._listarProyectos.getProyectos().then(proyectos => this.proyectos = proyectos.slice(1,5));
+        return this._listarProyectos.getProyectos().then(proyectos => this.proyectos = proyectos.slice());
     }
 
 }

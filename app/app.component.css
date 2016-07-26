@@ -25,3 +25,9 @@ body {
     blockquote::before { left: 0em; }
     main { padding:20px 0; }
     pre { font-size:12px; }*/
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #00a950;
+  color: #000000;
+}

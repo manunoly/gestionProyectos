@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Proyecto } from './proyecto'
 
 @Component({
     moduleId: module.id,
-    selector: 'selector',
+    selector: 'proyecto',
     template: `
   <div *ngIf="proyecto">
     <h2>{{proyecto.name}} details!</h2>
@@ -15,7 +14,6 @@ import { Proyecto } from './proyecto'
     </div>
   </div>
 `,
-    providers: [Router],
     precompile: [DetalleProyectoComponent]
 })
 export class DetalleProyectoComponent implements OnInit {

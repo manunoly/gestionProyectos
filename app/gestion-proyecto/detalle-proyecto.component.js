@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
 var DetalleProyectoComponent = (function () {
     function DetalleProyectoComponent() {
     }
@@ -17,9 +16,8 @@ var DetalleProyectoComponent = (function () {
     DetalleProyectoComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'selector',
+            selector: 'proyecto',
             template: "\n  <div *ngIf=\"proyecto\">\n    <h2>{{proyecto.name}} details!</h2>\n    <div><label>id: </label>{{proyecto.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"proyecto.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n",
-            providers: [router_1.Router],
             precompile: [DetalleProyectoComponent]
         }), 
         __metadata('design:paramtypes', [])

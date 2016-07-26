@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import {CORE_DIRECTIVES} from '@angular/common';
 import {} from './gestion-proyecto.component';
 
 @Component({

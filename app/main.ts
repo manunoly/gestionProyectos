@@ -4,7 +4,9 @@ import { APP_ROUTER_PROVIDERS } from './app.routes';
 import {provideForms, disableDeprecatedForms} from '@angular/forms';
 
 bootstrap(AppComponent, [
-  APP_ROUTER_PROVIDERS
+  APP_ROUTER_PROVIDERS,
+  disableDeprecatedForms(),
+  provideForms()
 ])
 .catch(err => console.error(err));
 

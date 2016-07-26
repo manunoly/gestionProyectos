@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var listar_proyectos_servise_1 = require('./listar-proyectos.servise');
+var router_2 = require('@angular/router');
 var ListarProyectosComponent = (function () {
     function ListarProyectosComponent(_route, 
         // private sub: any,
@@ -40,13 +41,14 @@ var ListarProyectosComponent = (function () {
      */
     ListarProyectosComponent.prototype.listarProyectos = function () {
         var _this = this;
-        return this._listarProyectos.getProyectos().then(function (proyectos) { return _this.proyectos = proyectos.slice(1, 5); });
+        return this._listarProyectos.getProyectos().then(function (proyectos) { return _this.proyectos = proyectos.slice(); });
     };
     ListarProyectosComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'listar-proyectos',
             templateUrl: 'listar-proyectos.component.html',
+            directives: [router_2.ROUTER_DIRECTIVES],
             providers: [listar_proyectos_servise_1.ListarProyectosService] /*,
             directives: [DetalleProyectoComponent]*/
         }), 
