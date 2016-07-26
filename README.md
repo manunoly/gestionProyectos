@@ -1,4 +1,4 @@
-# gestionProyectos
-GestionProyectosSenescyt
+# Gestion de Proyectos
+Gestion de Proyectos con Angular 2
 
-### Sample project to manage senescyt project propoused
+### Sample project to manage project propoused
