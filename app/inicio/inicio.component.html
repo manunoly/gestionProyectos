@@ -1,23 +1,29 @@
-<h1 class="row"> Inicio </h1>
 
-<!-- Split button -->
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Left</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Middle</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Right</button>
-  </div>
+<div class="pull-right">
+  <img src="app/img/logoiner.png" class="img-rounded" title="Instituto Nacional de Eficiencia Energética y Energías Renovables (INER)" alt="Instituto Nacional de Eficiencia Energética y Energías Renovables (INER)">
 </div>
+<h2 class="text-primary"> Bienvenidos al sistema para la postulación de proyectos del INER</h2>
+<hr>
 
-<div class="col-md-12">
-<alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+<div class="row">
+  <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
     {{ alert?.msg }}
-</alert>
+  </alert>
+  <!--<alert dismissOnTimeout="3000">This alert will dismiss in 3s</alert>-->
 </div>
-<alert dismissOnTimeout="3000">This alert will dismiss in 3s</alert>
-<alert>This alert will dismiss in 3s</alert>
-<button type="button" class='btn btn-primary' row (click)="addAlert()">Add Alert</button>
+
+<!--<button type="button" class='btn btn-primary' row (click)="addAlert()">Add Alert</button>-->
+<div style="font-size: 20px">
+  <blockquote>
+    <p class="text-justified row">
+      El objetivo es crear una herramienta informática para la postulación y sistematización de las propuestas de proyectos para
+      postulación interna, acorde al proceso de postulación interna de proyectos INER.
+    </p>
+  </blockquote>
+  <blockquote>
+    <p class="text-justified row">
+      Esta herramienta debe facilitar tanto el proceso de postulación como la consolidación de las propuestas para generar reportes
+      finales de uso interno o externo.
+    </p>
+  </blockquote>
+</div>

@@ -16,12 +16,12 @@ var InicioComponent = (function () {
     function InicioComponent() {
         this.alerts = [
             {
-                type: 'danger',
-                msg: 'Oh snap! Change a few things up and try submitting again.'
+                type: 'info',
+                msg: 'En la parte superior siempre tendrá accesible el menú.'
             },
             {
-                type: 'success',
-                msg: 'Well done! You successfully read this important alert message.',
+                type: 'info',
+                msg: 'Sitio en desarrollo.',
                 closable: true
             }
         ];

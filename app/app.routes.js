@@ -6,6 +6,7 @@ var definir_campos_component_1 = require('./gestion-proyecto/definir-campos.comp
 var nuevo_proyecto_component_1 = require('./gestion-proyecto/nuevo-proyecto.component');
 var no_encontrado_component_1 = require('./inicio/no-encontrado.component');
 var inicio_component_1 = require('./inicio/inicio.component');
+var reportes_component_1 = require('./reportes/reportes.component');
 exports.routes = [
     { path: '', redirectTo: 'inicio', pathMatch: 'full' },
     { path: 'inicio', component: inicio_component_1.InicioComponent },
@@ -28,6 +29,7 @@ exports.routes = [
             ]*/
     },
     { path: 'definir-campos', component: definir_campos_component_1.DefinirCamposComponent },
+    { path: 'reportes', component: reportes_component_1.ReportesComponent },
     { path: 'no-encontrado', component: no_encontrado_component_1.NoEncontradoComponent },
     /*{ path: 'proyecto/:id', component: DetalleProyectoComponent },*/
     { path: '**', redirectTo: 'no-encontrado' }

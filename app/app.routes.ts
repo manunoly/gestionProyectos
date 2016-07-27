@@ -5,6 +5,7 @@ import { DefinirCamposComponent }  from './gestion-proyecto/definir-campos.compo
 import { NuevoProyectoComponent }  from './gestion-proyecto/nuevo-proyecto.component';
 import { NoEncontradoComponent } from './inicio/no-encontrado.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ReportesComponent } from './reportes/reportes.component';
 import { AppComponent } from './app.component';
 
 export const routes: RouterConfig = [
@@ -28,6 +29,7 @@ export const routes: RouterConfig = [
       }
       ]*/},
   { path: 'definir-campos', component: DefinirCamposComponent },
+  { path: 'reportes', component: ReportesComponent },
   { path: 'no-encontrado', component: NoEncontradoComponent },
   /*{ path: 'proyecto/:id', component: DetalleProyectoComponent },*/
   { path: '**', redirectTo: 'no-encontrado' }
