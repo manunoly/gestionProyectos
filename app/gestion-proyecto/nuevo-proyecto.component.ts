@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Proyecto } from './proyecto';
 import { NgForm } from '@angular/forms';
 
+import { AlertComponent } from 'ng2-bootstrap/ng2-bootstrap';
+// let template = require('../inicio/alert-demo.html');
+
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import {CORE_DIRECTIVES} from '@angular/common';
 
@@ -9,18 +12,17 @@ import {CORE_DIRECTIVES} from '@angular/common';
     moduleId: module.id,
     selector: 'nuevo-proyecto',
     styleUrls: ['./nuevo-proyecto.component.css'],
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES,AlertComponent],
     templateUrl: 'nuevo-proyecto.component.html'
 })
 export class NuevoProyectoComponent implements OnInit {
-    powers = ['Really Smart', 'Super Flexible',
-        'Super Hot', 'Weather Changer'];
-
-    model = new Proyecto();
-    
-    
+    monedas = ['Dolares', 'Euros',
+        'Yen Japonés'];
+    private model = new Proyecto();    
     submitted = false;
-
+    lenguaje: string = "";
+    lenguajeM: boolean = false;
+    
     onSubmit() { 
     this.submitted = true; 
     alert("Salvar Proyecto");    
@@ -44,6 +46,11 @@ export class NuevoProyectoComponent implements OnInit {
   }
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+    this.lenguaje = window.navigator.userLanguage || window.navigator.language;
+    if (this.lenguaje == "es-Es") {
+        this.lenguajeM = true;
+    }
+    }
 
 }

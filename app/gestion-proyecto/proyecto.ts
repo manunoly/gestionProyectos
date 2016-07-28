@@ -7,6 +7,7 @@ class Proyecto {
     estado: string;
     montoRefencial: number;
     montoPrimerAnno: number;
+    moneda: string;
     lugarEjecucion: string;
     problema: string;
     justificacion: string;

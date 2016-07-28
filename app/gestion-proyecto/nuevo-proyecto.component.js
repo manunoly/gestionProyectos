@@ -10,13 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var proyecto_1 = require('./proyecto');
+var ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
+// let template = require('../inicio/alert-demo.html');
 var router_1 = require('@angular/router');
 var NuevoProyectoComponent = (function () {
     function NuevoProyectoComponent() {
-        this.powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
+        this.monedas = ['Dolares', 'Euros',
+            'Yen Japonés'];
         this.model = new proyecto_1.Proyecto();
         this.submitted = false;
+        this.lenguaje = "";
+        this.lenguajeM = false;
         this.active = true;
     }
     NuevoProyectoComponent.prototype.onSubmit = function () {
@@ -44,13 +48,18 @@ var NuevoProyectoComponent = (function () {
         this.active = false;
         setTimeout(function () { return _this.active = true; }, 0);
     };
-    NuevoProyectoComponent.prototype.ngOnInit = function () { };
+    NuevoProyectoComponent.prototype.ngOnInit = function () {
+        this.lenguaje = window.navigator.userLanguage || window.navigator.language;
+        if (this.lenguaje == "es-Es") {
+            this.lenguajeM = true;
+        }
+    };
     NuevoProyectoComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'nuevo-proyecto',
             styleUrls: ['./nuevo-proyecto.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
+            directives: [router_1.ROUTER_DIRECTIVES, ng2_bootstrap_1.AlertComponent],
             templateUrl: 'nuevo-proyecto.component.html'
         }), 
         __metadata('design:paramtypes', [])
